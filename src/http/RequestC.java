@@ -1,4 +1,4 @@
-package java8;
+package http;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -148,7 +148,7 @@ public class RequestC {
         String billy = "{ \"nome\": \"Billy\", \"email\": \"billy@exemplo.com\", \"senha\": \"SenhaBilly\" }";
 
         // CREATE
-        //funCreate(tommy);
+        //funCreate(jason);
 
         // READ
         //funRead();
