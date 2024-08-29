@@ -5,6 +5,9 @@ import java.util.LinkedHashMap;
 import static colecoes.GeraString.generateRandomString;
 
 public class ColecaoLinkedHashMap {
+
+    // LinkedHashMap tem capacidade inicial de 16 e fator de carga 0.75, mas mantém a ordem de inserção.
+
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
 

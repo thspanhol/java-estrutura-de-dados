@@ -7,6 +7,8 @@ import static colecoes.GeraString.generateRandomString;
 public class ColecaoLinkedHashSet {
     public static void main(String[] args) {
 
+        // A LinkedHashSet tem uma capacidade inicial padrão de 16, com fator de carga 0.75, mas mantém a ordem de inserção.
+
         long startTime = System.currentTimeMillis();
 
         LinkedHashSet<String> colecaoLinkedHashSet = new LinkedHashSet<>();

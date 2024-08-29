@@ -7,6 +7,8 @@ import static colecoes.GeraString.generateRandomString;
 public class ColecaoHashMap {
     public static void main(String[] args) {
 
+        // HashMap tem capacidade inicial de 16 e fator de carga 0.75.
+
         long startTime = System.currentTimeMillis();
 
         HashMap<String, String> colecaoHashMap = new HashMap<>();

@@ -7,6 +7,8 @@ import static colecoes.GeraString.generateRandomString;
 public class ColecaoHashSet {
     public static void main(String[] args) {
 
+        // A HashSet tem uma capacidade inicial padrão de 16, com fator de carga 0.75.
+
         long startTime = System.currentTimeMillis();
 
         HashSet<String> colecaoHashSet = new HashSet<>();

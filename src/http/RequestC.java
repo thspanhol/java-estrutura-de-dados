@@ -154,10 +154,10 @@ public class RequestC {
         //funRead();
 
         // UPDATE
-        //funUpdate("0dd09086-0586-489d-b530-59631ccb7e91", jason);
+        //funUpdate("4e4af66b-7e86-4a39-ad22-5cbeaa8c0930", jason);
 
         // DELETE
-        //funDelete("0dd09086-0586-489d-b530-59631ccb7e91");
+        //funDelete("c62f93e5-2d87-4e98-b49d-ed74c85db40e");
 
     }
 

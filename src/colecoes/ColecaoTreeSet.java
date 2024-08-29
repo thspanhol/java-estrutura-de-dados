@@ -6,6 +6,9 @@ import static colecoes.GeraString.generateRandomString;
 
 public class ColecaoTreeSet {
     public static void main(String[] args) {
+
+        // Não possui capacidade inicial ou máxima definida, é uma árvore de busca binária.
+
         long startTime = System.currentTimeMillis();
 
         TreeSet<String> colecaoTreeSet = new TreeSet<>();

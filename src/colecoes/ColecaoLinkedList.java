@@ -7,6 +7,8 @@ import static colecoes.GeraString.generateRandomString;
 public class ColecaoLinkedList {
     public static void main(String[] args) {
 
+        // A LinkedList não tem uma capacidade inicial ou máxima, pois é baseada em nós ligados.
+
         long startTime = System.currentTimeMillis();
 
         LinkedList<String> colecaoLinkedList = new LinkedList<>();

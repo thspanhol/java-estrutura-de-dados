@@ -5,6 +5,9 @@ import java.util.TreeMap;
 import static colecoes.GeraString.generateRandomString;
 
 public class colecaoTreeMap {
+
+    // TreeMap é baseado em uma árvore binária e mantém a ordem natural ou conforme o comparador.
+
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
 
