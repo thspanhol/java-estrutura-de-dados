@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class Lambda {
     public static void main(String[] args) {
 
+        // Uma função anônima
+        // Também pode ser usada para representar a implementação de uma interface funcional
+        // (uma interface que contém apenas um método abstrato).
+
         ArrayList<Integer> valores = new ArrayList<>();
         ArrayList<Integer> dobro = new ArrayList<>();
         ArrayList<Integer> par = new ArrayList<>();

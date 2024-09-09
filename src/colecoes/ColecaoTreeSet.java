@@ -9,23 +9,45 @@ public class ColecaoTreeSet {
 
         // Não possui capacidade inicial ou máxima definida, é uma árvore de busca binária.
 
-        long startTime = System.currentTimeMillis();
-
         TreeSet<String> colecaoTreeSet = new TreeSet<>();
 
         for (int i = 1; i <= 1000000; i++) {
             colecaoTreeSet.add(generateRandomString());
         }
 
-        colecaoTreeSet.add("Teste ADD");
-        colecaoTreeSet.add("Teste ADD");
-        colecaoTreeSet.remove("Teste ADD");
-        //colecaoTreeSet.set(lastIndex, "Teste SET");
-        System.out.println(colecaoTreeSet.contains("Teste ADD"));
+        // Inicia contador
+        long startTime = System.nanoTime();
 
-        long endTime = System.currentTimeMillis();
+        // Resgata o primeiro elemento
+        colecaoTreeSet.first();
+        long firstTime = System.nanoTime();
+        System.out.println(firstTime - startTime + " nanossegundos para resgatar o primeiro elemento.");
+        // Resgata o último elemento
+        colecaoTreeSet.last();
+        long lastTime = System.nanoTime();
+        System.out.println(lastTime - firstTime + " nanossegundos para resgatar o último elemento.");
+        // Adiciona elemento
+        colecaoTreeSet.add("ELEMENTO ADICIONADO");
+        //colecaoTreeSet.addFirst("ELEMENTO ADICIONADO"); ???
+        long addTime = System.nanoTime();
+        System.out.println(addTime - lastTime + " nanossegundos para adicionar um elemento.");
+        // Confere se elemento existe na coleção
+        colecaoTreeSet.contains("ELEMENTO ADICIONADO");
+        long containTime = System.nanoTime();
+        System.out.println(containTime - addTime + " nanossegundos para conferir se contêm o elemento.");
+        // Remover elemento
+        colecaoTreeSet.remove("ELEMENTO ADICIONADO");
+        long removeTime = System.nanoTime();
+        System.out.println(removeTime - containTime + " nanossegundos para remover um elemento.");
+        // Remover todos
+        colecaoTreeSet.clear();
+        long removeAllTime = System.nanoTime();
+        System.out.println(removeAllTime - removeTime + " nanossegundos para remover todos.");
+
+        // Encerra contador
+        long endTime = System.nanoTime();
         long totalTime = endTime - startTime;
-        System.out.println(totalTime + " milissegundos");
+        System.out.println(totalTime + " nanossegundos total.");
 
     }
 }

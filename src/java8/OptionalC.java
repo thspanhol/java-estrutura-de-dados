@@ -4,6 +4,9 @@ import java.util.Optional;
 
 public class OptionalC {
     public static void main(String[] args) {
+
+        // Utilizado para valores opcionais, evitando erros com null
+
         Optional<String> optional = Optional.ofNullable("Thales")
                 .filter(text -> text.equals("Thales"));
 

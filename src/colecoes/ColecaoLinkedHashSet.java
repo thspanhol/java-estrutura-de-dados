@@ -8,8 +8,9 @@ public class ColecaoLinkedHashSet {
     public static void main(String[] args) {
 
         // A LinkedHashSet tem uma capacidade inicial padrão de 16, com fator de carga 0.75, mas mantém a ordem de inserção.
-
-        long startTime = System.currentTimeMillis();
+        // Armazena valores únicos, não insere valores repetidos.
+        // A ordem dos elementos é baseada na ordem de inserção, mas não é indexada como uma lista.
+        // Duplamente Ligada
 
         LinkedHashSet<String> colecaoLinkedHashSet = new LinkedHashSet<>();
 
@@ -17,15 +18,34 @@ public class ColecaoLinkedHashSet {
             colecaoLinkedHashSet.add(generateRandomString());
         }
 
-        colecaoLinkedHashSet.add("Teste ADD");
-        colecaoLinkedHashSet.add("Teste ADD");
-        colecaoLinkedHashSet.remove("Teste ADD");
-        //colecaoLinkedHashSet.set(lastIndex, "Teste SET");
-        System.out.println(colecaoLinkedHashSet.contains("Teste ADD"));
+        // Inicia contador
+        long startTime = System.nanoTime();
 
-        long endTime = System.currentTimeMillis();
+        // Adiciona elemento
+        colecaoLinkedHashSet.add("ELEMENTO ADICIONADO");
+        long addTime = System.nanoTime();
+        System.out.println(addTime - startTime + " nanossegundos para adicionar um elemento.");
+        // Adicionar no final
+        colecaoLinkedHashSet.addLast("TESTE ADD FINAL");
+        long addFinalTime = System.nanoTime();
+        System.out.println(addFinalTime - addTime + " nanossegundos para adicionar no final.");
+        // Confere se elemento existe na coleção
+        colecaoLinkedHashSet.contains("ELEMENTO ADICIONADO");
+        long containTime = System.nanoTime();
+        System.out.println(containTime - addFinalTime + " nanossegundos para conferir se contêm o elemento.");
+        // Remover elemento
+        colecaoLinkedHashSet.remove("ELEMENTO ADICIONADO");
+        long removeTime = System.nanoTime();
+        System.out.println(removeTime - containTime + " nanossegundos para remover um elemento.");
+        // Remover todos
+        colecaoLinkedHashSet.clear();
+        long removeAllTime = System.nanoTime();
+        System.out.println(removeAllTime - removeTime + " nanossegundos para remover todos.");
+
+        // Encerra contador
+        long endTime = System.nanoTime();
         long totalTime = endTime - startTime;
-        System.out.println(totalTime + " milissegundos");
+        System.out.println(totalTime + " nanossegundos total.");
 
     }
 }

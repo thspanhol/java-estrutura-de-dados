@@ -151,13 +151,13 @@ public class RequestC {
         //funCreate(jason);
 
         // READ
-        //funRead();
+        funRead();
 
         // UPDATE
-        //funUpdate("4e4af66b-7e86-4a39-ad22-5cbeaa8c0930", jason);
+        //funUpdate("df75d61b-9277-48d0-bc7e-9913105471ca", billy);
 
         // DELETE
-        //funDelete("c62f93e5-2d87-4e98-b49d-ed74c85db40e");
+        //funDelete("df75d61b-9277-48d0-bc7e-9913105471ca");
 
     }
 

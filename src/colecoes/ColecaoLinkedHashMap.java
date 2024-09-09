@@ -6,10 +6,10 @@ import static colecoes.GeraString.generateRandomString;
 
 public class ColecaoLinkedHashMap {
 
-    // LinkedHashMap tem capacidade inicial de 16 e fator de carga 0.75, mas mantém a ordem de inserção.
-
     public static void main(String[] args) {
-        long startTime = System.currentTimeMillis();
+
+        // LinkedHashMap tem capacidade inicial de 16 e fator de carga 0.75, mas mantém a ordem de inserção.
+        // Baseada em chave-valor, não como uma lista ordenada de elementos.
 
         LinkedHashMap<String, String> colecaoLinkedHashMap = new LinkedHashMap<>();
 
@@ -18,17 +18,38 @@ public class ColecaoLinkedHashMap {
             colecaoLinkedHashMap.put(valor, valor);
         }
 
-        int lastIndex = colecaoLinkedHashMap.size() - 1;
+        // Inicia contador
+        long startTime = System.nanoTime();
 
-        colecaoLinkedHashMap.put("Teste ADD", "Teste ADD");
-        colecaoLinkedHashMap.put("Teste ADD", "Teste ADD");
-        colecaoLinkedHashMap.remove("Teste ADD");
-        //colecaoLinkedHashMap.set(lastIndex, "Teste SET");
-        System.out.println(colecaoLinkedHashMap.containsKey("Teste ADD"));
+        // Adiciona um elemento
+        colecaoLinkedHashMap.put("KEYTESTE", "VALUETESTE");
+        long addTime = System.nanoTime();
+        System.out.println(addTime - startTime + " nanossegundos para adicionar um elemento.");
+        // Altera um elemento
+        colecaoLinkedHashMap.put("KEYTESTE", "VALUETESTE2");
+        long putTime = System.nanoTime();
+        System.out.println(putTime - addTime + " nanossegundos para alterar um elemento.");
+        // Resgata um elemento
+        colecaoLinkedHashMap.get("KEYTESTE");
+        long getTime = System.nanoTime();
+        System.out.println(getTime - putTime + " nanossegundos para resgatar um elemento.");
+        // Confere a existência de um elemento
+        colecaoLinkedHashMap.containsKey("KEYTESTE");
+        long containTime = System.nanoTime();
+        System.out.println(containTime - getTime + " nanossegundos para conferir se contem um elemento.");
+        // Remove um elemento
+        colecaoLinkedHashMap.remove("KEYTESTE");
+        long removeOneTime = System.nanoTime();
+        System.out.println(removeOneTime - containTime + " nanossegundos para remover um elemento.");
+        // Remover todos
+        colecaoLinkedHashMap.clear();
+        long removeAllTime = System.nanoTime();
+        System.out.println(removeAllTime - removeOneTime + " nanossegundos para remover todos.");
 
-        long endTime = System.currentTimeMillis();
+        // Encerra contador
+        long endTime = System.nanoTime();
         long totalTime = endTime - startTime;
-        System.out.println(totalTime + " milissegundos");
+        System.out.println(totalTime + " nanossegundos total.");
 
     }
 }

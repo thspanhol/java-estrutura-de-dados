@@ -9,6 +9,8 @@ import java.util.stream.Stream;
 public class Streams {
     public static void main(String[] args) {
 
+        // API introduzida no Java 8 para processar coleções de dados de maneira funcional.
+
         ArrayList<Integer> lista = new ArrayList<>(Arrays.asList(1,5,8,9,1,4,7,5,6,6,9,9));
 
         List<Integer> novaLista = lista.stream()
