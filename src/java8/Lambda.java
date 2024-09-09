@@ -2,8 +2,15 @@ package java8;
 
 import java.util.ArrayList;
 
+interface operacao {
+    int executar(int a, int b);
+}
+
 public class Lambda {
     public static void main(String[] args) {
+
+        operacao soma = (a, b) -> a + b;
+        System.out.println(soma.executar(4, 3));
 
         // Uma função anônima
         // Também pode ser usada para representar a implementação de uma interface funcional

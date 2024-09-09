@@ -119,37 +119,37 @@ public class ComparacaoMap {
         System.out.println(addTime - startTime + " nanossegundos para adicionar um elemento no HashMap.");
         System.out.println(laddTime - lstartTime + " nanossegundos para adicionar um elemento no LinkedHashMap.");
         System.out.println(taddTime - tstartTime + " nanossegundos para adicionar um elemento no TreeMap.");
-        System.out.println(addTime - startTime < laddTime - lstartTime ? "HashMap é mais rápido \n" : laddTime - lstartTime < taddTime - tstartTime ? "LinkedMap é mais rápido \n" : "TreeMap é mais rápido\n");
+        System.out.println(addTime - startTime < laddTime - lstartTime ? "HashMap foi mais rápido \n" : laddTime - lstartTime < taddTime - tstartTime ? "LinkedMap foi mais rápido \n" : "TreeMap foi mais rápido\n");
 
         System.out.println(putTime - addTime + " nanossegundos para alterar um elemento no HashMap.");
         System.out.println(lputTime - laddTime + " nanossegundos para alterar um elemento no LinkedHashMap.");
         System.out.println(tputTime - taddTime + " nanossegundos para alterar um elemento no TreeMap.");
-        System.out.println(putTime - addTime < lputTime - laddTime ? "HashMap é mais rápido \n" : lputTime - laddTime < tputTime - taddTime ? "LinkedMap é mais rápido \n" : "TreeMap é mais rápido\n");
+        System.out.println(putTime - addTime < lputTime - laddTime ? "HashMap foi mais rápido \n" : lputTime - laddTime < tputTime - taddTime ? "LinkedMap foi mais rápido \n" : "TreeMap foi mais rápido\n");
 
         System.out.println(getTime - putTime + " nanossegundos para resgatar um elemento no HashMap.");
         System.out.println(lgetTime - lputTime + " nanossegundos para resgatar um elemento no LinkedHashMap.");
         System.out.println(tgetTime - tputTime + " nanossegundos para resgatar um elemento no TreeMap.");
-        System.out.println(getTime - putTime < lgetTime - lputTime ? "HashMap é mais rápido \n" : lgetTime - lputTime < tgetTime - tputTime ? "LinkedMap é mais rápido \n" : "TreeMap é mais rápido\n");
+        System.out.println(getTime - putTime < lgetTime - lputTime ? "HashMap foi mais rápido \n" : lgetTime - lputTime < tgetTime - tputTime ? "LinkedMap foi mais rápido \n" : "TreeMap foi mais rápido\n");
 
         System.out.println(containTime - getTime + " nanossegundos para conferir se contem um elemento no HashMap.");
         System.out.println(lcontainTime - lgetTime + " nanossegundos para conferir se contem um elemento no LinkedHashMap.");
         System.out.println(tcontainTime - tgetTime + " nanossegundos para conferir se contem um elemento no TreeMap.");
-        System.out.println(containTime - getTime < lcontainTime - lgetTime ? "HashMap é mais rápido \n" : lcontainTime - lgetTime < tcontainTime - tgetTime ? "LinkedMap é mais rápido \n" : "TreeMap é mais rápido\n");
+        System.out.println(containTime - getTime < lcontainTime - lgetTime ? "HashMap foi mais rápido \n" : lcontainTime - lgetTime < tcontainTime - tgetTime ? "LinkedMap foi mais rápido \n" : "TreeMap foi mais rápido\n");
 
         System.out.println(removeOneTime - containTime + " nanossegundos para remover um elemento no HashMap.");
         System.out.println(lremoveOneTime - lcontainTime + " nanossegundos para remover um elemento no LinkedHashMap.");
         System.out.println(tremoveOneTime - tcontainTime + " nanossegundos para remover um elemento no TreeMap.");
-        System.out.println(removeOneTime - containTime < lremoveOneTime - lcontainTime && removeOneTime - containTime < tremoveOneTime - tcontainTime ? "HashMap é mais rápido \n" : lremoveOneTime - lcontainTime < tremoveOneTime - tcontainTime ? "LinkedMap é mais rápido \n" : "TreeMap é mais rápido \n");
+        System.out.println(removeOneTime - containTime < lremoveOneTime - lcontainTime && removeOneTime - containTime < tremoveOneTime - tcontainTime ? "HashMap foi mais rápido \n" : lremoveOneTime - lcontainTime < tremoveOneTime - tcontainTime ? "LinkedMap foi mais rápido \n" : "TreeMap foi mais rápido \n");
 
         System.out.println(removeAllTime - removeOneTime + " nanossegundos para remover todos no HashMap.");
         System.out.println(lremoveAllTime - lremoveOneTime + " nanossegundos para remover todos no LinkedHashMap.");
         System.out.println(tremoveAllTime - tremoveOneTime + " nanossegundos para remover todos no TreeMap.");
-        System.out.println(removeAllTime - removeOneTime < lremoveAllTime - lremoveOneTime ? "HashMap é mais rápido \n" : lremoveAllTime - lremoveOneTime < tremoveAllTime - tremoveOneTime ? "LinkedMap é mais rápido \n" : "TreeMap é mais rápido\n");
+        System.out.println(removeAllTime - removeOneTime < lremoveAllTime - lremoveOneTime ? "HashMap foi mais rápido \n" : lremoveAllTime - lremoveOneTime < tremoveAllTime - tremoveOneTime ? "LinkedMap foi mais rápido \n" : "TreeMap foi mais rápido\n");
 
         System.out.println(totalTime + " nanossegundos total no HashMap.");
         System.out.println(ltotalTime + " nanossegundos total no LinkedHashMap.");
         System.out.println(ttotalTime + " nanossegundos total no TreeMap.");
-        System.out.println(totalTime < ltotalTime ? "HashMap é mais rápido \n" : ltotalTime < ttotalTime ? "LinkedMap é mais rápido \n" : "TreeMap é mais rápido\n");
+        System.out.println(totalTime < ltotalTime ? "HashMap foi mais rápido \n" : ltotalTime < ttotalTime ? "LinkedMap foi mais rápido \n" : "TreeMap foi mais rápido\n");
 
         // HashMap
         // HashMap tem capacidade inicial de 16 e fator de carga 0.75.

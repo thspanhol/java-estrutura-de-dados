@@ -106,27 +106,27 @@ public class ComparacaoSet {
         System.out.println(addTime - startTime + " nanossegundos para adicionar um elemento no HashSet.");
         System.out.println(laddTime - lstartTime + " nanossegundos para adicionar um elemento no LinkedHashSet.");
         System.out.println(taddTime - tlastTime + " nanossegundos para adicionar um elemento no TreeSet.");
-        System.out.println(addTime - startTime < laddTime - lstartTime && addTime - startTime < taddTime - tlastTime ? "HashSet é mais rápido \n" : laddTime - lstartTime < taddTime - tstartTime ? "LinkedHashSet é mais rápido \n" : "TreeSet é mais rápido\n");
+        System.out.println(addTime - startTime < laddTime - lstartTime && addTime - startTime < taddTime - tlastTime ? "HashSet foi mais rápido \n" : laddTime - lstartTime < taddTime - tstartTime ? "LinkedHashSet foi mais rápido \n" : "TreeSet foi mais rápido\n");
 
         System.out.println(containTime - addTime + " nanossegundos para conferir se contêm o elemento no HashSet.");
         System.out.println(lcontainTime - laddFinalTime + " nanossegundos para conferir se contêm o elemento no LinkedHashSet.");
         System.out.println(tcontainTime - taddTime + " nanossegundos para conferir se contêm o elemento no TreeSet.");
-        System.out.println(containTime - addTime < lcontainTime - laddFinalTime ? "HashSet é mais rápido \n" : lcontainTime - laddFinalTime < tcontainTime - taddTime ? "LinkedHashSet é mais rápido \n" : "TreeSet é mais rápido\n");
+        System.out.println(containTime - addTime < lcontainTime - laddFinalTime && containTime - addTime < tcontainTime - taddTime ? "HashSet foi mais rápido \n" : lcontainTime - laddFinalTime < tcontainTime - taddTime ? "LinkedHashSet foi mais rápido \n" : "TreeSet foi mais rápido\n");
 
         System.out.println(removeTime - containTime + " nanossegundos para remover um elemento no HashSet.");
         System.out.println(lremoveTime - lcontainTime + " nanossegundos para remover um elemento no LinkedHashSet.");
         System.out.println(tremoveTime - tcontainTime + " nanossegundos para remover um elemento no TreeSet.");
-        System.out.println(removeTime - containTime < lremoveTime - lcontainTime && removeTime - containTime < tremoveTime - tcontainTime ? "HashSet é mais rápido \n" : lremoveTime - lcontainTime < tremoveTime - tcontainTime ? "LinkedHashSet é mais rápido \n" : "TreeSet é mais rápido\n");
+        System.out.println(removeTime - containTime < lremoveTime - lcontainTime && removeTime - containTime < tremoveTime - tcontainTime ? "HashSet foi mais rápido \n" : lremoveTime - lcontainTime < tremoveTime - tcontainTime ? "LinkedHashSet foi mais rápido \n" : "TreeSet foi mais rápido\n");
 
         System.out.println(removeAllTime - removeTime + " nanossegundos para remover todos elementos no HashSet.");
         System.out.println(lremoveAllTime - lremoveTime + " nanossegundos para remover todos no LinkedHashSet.");
         System.out.println(tremoveAllTime - tremoveTime + " nanossegundos para remover todos no TreeSet.");
-        System.out.println(removeAllTime - removeTime < lremoveAllTime - lremoveTime ? "HashSet é mais rápido \n" : lremoveAllTime - lremoveTime < tremoveAllTime - tremoveTime ? "LinkedHashSet é mais rápido \n" : "TreeSet é mais rápido\n");
+        System.out.println(removeAllTime - removeTime < lremoveAllTime - lremoveTime ? "HashSet foi mais rápido \n" : lremoveAllTime - lremoveTime < tremoveAllTime - tremoveTime ? "LinkedHashSet foi mais rápido \n" : "TreeSet foi mais rápido\n");
 
         System.out.println(totalTime + " nanossegundos total no HashSet.");
         System.out.println(ltotalTime + " nanossegundos total no LinkedHashSet.");
         System.out.println(ttotalTime + " nanossegundos total no TreeSet.");
-        System.out.println(totalTime < ltotalTime ? "HashSet é mais rápido \n" : ltotalTime < ttotalTime ? "LinkedHashSet é mais rápido \n" : "TreeSet é mais rápido\n");
+        System.out.println(totalTime < ltotalTime ? "HashSet foi mais rápido \n" : ltotalTime < ttotalTime ? "LinkedHashSet foi mais rápido \n" : "TreeSet foi mais rápido\n");
 
         // A HashSet tem uma capacidade inicial padrão de 16, com fator de carga 0.75.
         // Armazena valores únicos, não insere valores repetidos.
@@ -139,7 +139,7 @@ public class ComparacaoSet {
         // A ordem dos elementos é baseada na ordem de inserção, mas não é indexada como uma lista.
         // Duplamente Ligada
 
-        // Não possui capacidade inicial ou máxima definida, é uma árvore de busca binária.
+        // Treeset não possui capacidade inicial ou máxima definida, é uma árvore de busca binária.
 
 //        --- Pontos em Comum ---
 //        Todas implementam a interface Set em Java.

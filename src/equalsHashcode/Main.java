@@ -15,7 +15,8 @@ public class Main {
 
         System.out.println(userTres + " " + userTres.hashCode());
 
-        System.out.println(userUm.equals(userTres)); // Mesmo conteúdo mas não é igual
+        // Mesmo conteúdo, mas não é igual
+        System.out.println(userUm.equals(userTres));
         System.out.println(userUm.nome.equals(userTres.nome));
 
         //long endTime = System.nanoTime();

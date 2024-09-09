@@ -1,6 +1,7 @@
 package java8;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +9,7 @@ public class WildCardsC {
 
     public static void printList(List<?> list) {
         for (Object element : list) {
-            System.out.println(element);
+            System.out.print(element);
         }
     }
 
@@ -30,33 +31,36 @@ public class WildCardsC {
 
         /* Unbounded Wildcards (?): Usado quando você quer permitir qualquer tipo de dado. */
 
-        List<String> strList = List.of("Preto", "Branco", "Amarelo");
-        List<Integer> intList = List.of(1, 2, 3);
+        List<?> strList = List.of("Preto", "Branco", 7, 7);
+        List<?> intList = List.of(1, 2, 't', "th");
 
         printList(strList);
+        System.out.println();
         printList(intList);
+        System.out.println();
+
 
 
         /* Upper Bounded Wildcards (? extends Type): Usado quando você quer permitir qualquer tipo que seja uma
         subclasse (ou o próprio tipo) de um tipo específico. */
 
-        List<Integer> integerList = List.of(1, 2, 3);
-        List<Double> doubleList = List.of(1.1, 2.2, 3.3);
+        List<? extends Number> numberList = List.of(1, 2, 1.1, 2.2);
+        List<? extends Serializable> serializableList = List.of('t', 'h', "sp", "th");
 
-        System.out.println(sum(integerList));
-        System.out.println(sum(doubleList));
+        System.out.println(sum(numberList));
+        System.out.println(serializableList);
 
         /* Lower Bounded Wildcards (? super Type): Usado quando você quer permitir qualquer tipo que seja uma
         superclasse (ou o próprio tipo) de um tipo específico. */
 
-        List<Number> numberList = new ArrayList<>();
-        List<Object> objectList = new ArrayList<>();
+        List<? super Number> numbersList = new ArrayList<>();
+        List<? super Integer> integerList = new ArrayList<>();
 
-        addNumbers(numberList);
-        addNumbers(objectList);
+        addNumbers(numbersList);
+        addNumbers(integerList);
 
         System.out.println(numberList);
-        System.out.println(objectList);
+        System.out.println(integerList);
 
     }
 }

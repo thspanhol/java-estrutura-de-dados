@@ -14,14 +14,15 @@ public class Streams {
         ArrayList<Integer> lista = new ArrayList<>(Arrays.asList(1,5,8,9,1,4,7,5,6,6,9,9));
 
         List<Integer> novaLista = lista.stream()
-                .skip(3) // Pula 3
-                .distinct() // Filtra os repitidos
-                .limit(6) // Limita 6 resultados
-                .map(e -> e * 3) // Transforma os dados
-                .filter(e -> e % 2 == 0) // Filtra pares
+                .skip(3) // pula 3
+                .distinct() // filtra os repetidos
+                .limit(6) // limita 6
+                .map(e -> e * 3) // transforma o elemento
+                .filter(e -> e % 2 == 0) // filtra pares
                 .collect(Collectors.toList());
 
         System.out.println(novaLista);
+        novaLista.stream().forEach(System.out::println);
 
     }
 }
