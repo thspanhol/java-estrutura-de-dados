@@ -10,7 +10,6 @@ public class ColecaoArrayList {
         // O ArrayList tem um tamanho inicial padrão de 10 elementos, e cresce dinamicamente conforme necessário.
         // Quando a capacidade é excedida, o tamanho do array subjacente é aumentado em 50% do tamanho atual.
 
-
         ArrayList<String> colecaoArrayList = new ArrayList<>();
 
         for (int i = 1; i <= 1000000; i++) {
@@ -55,5 +54,4 @@ public class ColecaoArrayList {
         System.out.println(totalTime + " nanossegundos total.");
 
     }
-
 }

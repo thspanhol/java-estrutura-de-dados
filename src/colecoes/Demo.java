@@ -39,9 +39,10 @@ public class Demo {
         // HashMap
         System.out.println("\nExemplo HashMap:");
         Map<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("D", 4);
         hashMap.put("A", 1);
-        hashMap.put("B", 2);
         hashMap.put("C", 3);
+        hashMap.put("B", 2);
         System.out.println("HashMap: " + hashMap);
         hashMap.remove("B");
         System.out.println("HashMap pós remoção: " + hashMap);
@@ -69,11 +70,11 @@ public class Demo {
         // HashSet
         System.out.println("\nExemplo HashSet:");
         Set<String> hashSet = new HashSet<>();
-        hashSet.add("A");
-        hashSet.add("B");
-        hashSet.add("C");
+        hashSet.add("10");
+        hashSet.add("5");
+        hashSet.add("20");
         System.out.println("HashSet: " + hashSet);
-        hashSet.remove("B");
+        hashSet.remove("5");
         System.out.println("HashSet pós remoção: " + hashSet);
 
         // LinkedHashSet

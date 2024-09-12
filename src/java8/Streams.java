@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Streams {
     public static void main(String[] args) {
@@ -22,7 +21,7 @@ public class Streams {
                 .collect(Collectors.toList());
 
         System.out.println(novaLista);
-        novaLista.stream().forEach(System.out::println);
+        novaLista.forEach(System.out::println);
 
     }
 }

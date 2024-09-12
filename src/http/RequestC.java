@@ -148,16 +148,16 @@ public class RequestC {
         String billy = "{ \"nome\": \"Billy\", \"email\": \"billy@exemplo.com\", \"senha\": \"SenhaBilly\" }";
 
         // CREATE
-        //funCreate(jason);
+        // funCreate(jason);
 
         // READ
-        funRead();
+        // funRead();
 
         // UPDATE
-        //funUpdate("df75d61b-9277-48d0-bc7e-9913105471ca", billy);
+        // funUpdate("e5d9ab26-40e5-4ef5-b1c2-d29d9add4b97", billy);
 
         // DELETE
-        //funDelete("df75d61b-9277-48d0-bc7e-9913105471ca");
+        // funDelete("e5d9ab26-40e5-4ef5-b1c2-d29d9add4b97");
 
     }
 

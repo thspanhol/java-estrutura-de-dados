@@ -39,16 +39,15 @@ public class WildCardsC {
         printList(intList);
         System.out.println();
 
-
-
         /* Upper Bounded Wildcards (? extends Type): Usado quando você quer permitir qualquer tipo que seja uma
         subclasse (ou o próprio tipo) de um tipo específico. */
 
         List<? extends Number> numberList = List.of(1, 2, 1.1, 2.2);
-        List<? extends Serializable> serializableList = List.of('t', 'h', "sp", "th");
+        List<? extends Serializable> serializableList = List.of('t', 'h', "sp", "th" );
 
         System.out.println(sum(numberList));
         System.out.println(serializableList);
+
 
         /* Lower Bounded Wildcards (? super Type): Usado quando você quer permitir qualquer tipo que seja uma
         superclasse (ou o próprio tipo) de um tipo específico. */

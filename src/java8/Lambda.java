@@ -2,14 +2,21 @@ package java8;
 
 import java.util.ArrayList;
 
-interface operacao {
+interface Operacao {
     int executar(int a, int b);
 }
 
 public class Lambda {
+
+    static void testeMetodo(Operacao operacao){
+        operacao.executar(2, 3);
+    }
+
     public static void main(String[] args) {
 
-        operacao soma = (a, b) -> a + b;
+        testeMetodo((a, b) -> a + b);
+
+        Operacao soma = (a, b) -> a + b;
         System.out.println(soma.executar(4, 3));
 
         // Uma função anônima
