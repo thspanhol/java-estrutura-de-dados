@@ -14,7 +14,7 @@ public class Lambda {
 
     public static void main(String[] args) {
 
-        testeMetodo((a, b) -> a + b);
+        //testeMetodo((a, b) -> a + b);
 
         Operacao soma = (a, b) -> a + b;
         System.out.println(soma.executar(4, 3));
