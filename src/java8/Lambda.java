@@ -2,22 +2,22 @@ package java8;
 
 import java.util.ArrayList;
 
-interface Operacao {
-    int executar(int a, int b);
-}
+//interface Operacao {
+//    int executar(int a, int b);
+//}
 
 public class Lambda {
 
-    static void testeMetodo(Operacao operacao){
-        operacao.executar(2, 3);
-    }
+//    static void testeMetodo(Operacao operacao){
+//        operacao.executar(2, 3);
+//    }
 
     public static void main(String[] args) {
 
         //testeMetodo((a, b) -> a + b);
 
-        Operacao soma = (a, b) -> a + b;
-        System.out.println(soma.executar(4, 3));
+//        Operacao soma = (a, b) -> a + b;
+//        System.out.println(soma.executar(4, 3));
 
         // Uma função anônima
         // Também pode ser usada para representar a implementação de uma interface funcional
