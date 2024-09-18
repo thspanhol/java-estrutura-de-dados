@@ -15,7 +15,7 @@ public class Autentica {
     public static void main(String[] args) {
 
         Operacao soma = (a, b) -> a + b;
-        System.out.println(soma.executar(4, 3));
+        System.out.println(soma.executar(7, 14));
 
     }
 }
