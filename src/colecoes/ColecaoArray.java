@@ -25,6 +25,8 @@ public class ColecaoArray {
 
         //List.of(1, 2, 3, 4, 5);
 
+        nums1[4] = 2;
+
         nums3.add(1);
         nums3.add(2);
         nums3.add(3);
